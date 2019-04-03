@@ -1,0 +1,22 @@
+{
+  "name": "goorm-vue-beginner",
+  "version": "0.1.0",
+  "description": "Source code for Vue beginner lecture on goorm EDU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkaybob/codigm-vue-beginner.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lkaybob/codigm-vue-beginner/issues"
+  },
+  "homepage": "https://github.com/lkaybob/codigm-vue-beginner#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
