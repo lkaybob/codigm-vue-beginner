@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-model Example</title>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>{{ inputValue}}</p>
+    <input type="text" name="example-input" id="example-input"
+           v-model="inputValue">
+  </div>
+  <script>
+  let vm=new Vue({
+    el:"#app",
+    data: {
+      inputValue:""
+    }
+  });
+  </script>
+</body>
+</html>
