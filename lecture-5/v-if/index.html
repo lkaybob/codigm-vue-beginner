@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p v-if="isNotClicked">Not Clicked</p>
+    <p v-else-if="lessThanTenClicks">Clicked {{ clicks }} times!</p>
+    <p v-else>Too many Clicks!</p>
+    <button v-on:click="onMouseClick">Click Me!</button>
+  </div>
+  <script>
+  new Vue({
+    el:"#app",
+    data:{
+      clicks:0
+    },
+    methods:{
+      onMouseClick: function (event) {
+        this.clicks++;
+      }
+    },
+    computed:{
+      isNotClicked: function () {
+        return this.clicks===0;
+      },
+      lessThanTenClicks: function () {
+        return this.clicks<=10;
+      }
+    }
+  })
+  </script>
+</body>
+</html>

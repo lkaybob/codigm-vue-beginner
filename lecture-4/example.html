@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Example Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="example">
+    <p>{{reversedMessage}}</p>
+    <input type="text" name="example" id="example"
+           v-on:keydown.enter="enterPressed"
+           v-model="inputValue">
+  </div>
+  <script>
+  let vm=new Vue({
+    el:"#example",
+    data:{
+      message:"Hello",
+      inputValue: null
+    },
+    methods: {
+      enterPressed() {
+        alert("Enter Key Pressed!");
+      }
+    },
+    computed:{
+      reversedMessage: function () {
+        return this.message.split("").reverse().join("")
+      }
+    },
+    watch: {
+      inputValue: function(newValue, oldValue) {
+        console.log(`Old Message : ${oldValue}`);
+        console.log(`New Message : ${newValue}`);
+      }
+    }
+  })
+  </script>
+</body>
+</html>
